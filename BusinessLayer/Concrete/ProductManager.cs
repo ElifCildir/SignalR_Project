@@ -40,7 +40,37 @@ namespace BusinessLayer.Concrete
 
 		public List<Procduct> TGetProductsWithCategories()
 		{
-			throw new NotImplementedException();
+            return _productDal.GetProductsWithCategories();
+		}
+
+		public int TProductCount()
+		{
+			return _productDal.ProductCount();
+		}
+
+		public int TProductCountByCategoryNameDrink()
+		{
+            return _productDal.ProductCountByCategoryNameDrink();
+		}
+
+		public int TProductCountByCategoryNameHamburger()
+		{
+			return _productDal.ProductCountByCategoryNameHamburger();
+		}
+
+		public string TProductNameByMaxPrice()
+		{
+			return _productDal.ProductNameByMaxPrice();
+		}
+
+		public string TProductNameByMinPrice()
+		{
+			return _productDal.ProductNameByMinPrice();
+		}
+
+		public decimal TProductPriceAvg()
+		{
+			return _productDal.ProductPriceAvg();   
 		}
 
 		public void TUpdate(Procduct entity)

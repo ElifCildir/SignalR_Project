@@ -12,5 +12,17 @@ namespace BusinessLayer.Abstract
     {
 
         List<Procduct> TGetProductsWithCategories();
-    }
+        int TProductCount();
+		int TProductCountByCategoryNameHamburger();
+
+		int TProductCountByCategoryNameDrink();
+
+        decimal TProductPriceAvg();
+
+		string TProductNameByMaxPrice();
+
+		string TProductNameByMinPrice();
+
+
+	}
 }

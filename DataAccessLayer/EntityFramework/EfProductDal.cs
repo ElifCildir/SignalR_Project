@@ -24,6 +24,42 @@ namespace DataAccessLayer.EntityFramework
 			return values;
 		}
 
+		public int ProductCount()
+		{
+			using var context = new SignalRContext();
+			return context.Procducts.Count();
+		}
 
+		public int ProductCountByCategoryNameDrink()
+		{
+			using var context = new SignalRContext();
+			return context.Procducts.Where(x => x.CategoryID == (context.Categories.Where(y => y.CategoryName == "İçecek").Select(z => z.CategoryID).FirstOrDefault())).Count();
+		}
+
+		public int ProductCountByCategoryNameHamburger()
+		{
+			using var context = new SignalRContext();
+			return context.Procducts.Where(x => x.CategoryID == (context.Categories.Where(y => y.CategoryName == "Hamburger").Select(z => z.CategoryID).FirstOrDefault())).Count();
+		}
+
+		public string ProductNameByMaxPrice()
+		{
+			using var context = new SignalRContext();
+			return context.Procducts.Where(x => x.Price == (context.Procducts.Max(y => y.Price))).Select(z => z.ProductName).FirstOrDefault();
+        }
+
+		public string ProductNameByMinPrice()
+		{
+			using var context = new SignalRContext();
+			return context.Procducts.Where(x => x.Price == (context.Procducts.Min(y => y.Price))).Select(z => z.ProductName).FirstOrDefault();
+		}
+
+		public decimal ProductPriceAvg()
+		{
+			using var context = new SignalRContext();
+
+			return context.Procducts.Average(x => x.Price);
+
+		}
 	}
 }

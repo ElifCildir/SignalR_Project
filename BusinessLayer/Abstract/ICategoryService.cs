@@ -9,7 +9,12 @@ namespace BusinessLayer.Abstract
 {
     public interface ICategoryService: IGenericSevice<Category>
     {
-		public int TCategoryCount();
+		 int TCategoryCount();
 
-	}
+		int TActiveCategoryCount();
+		int TPassiveCategoryCount();
+
+		
+
+    }
 }
