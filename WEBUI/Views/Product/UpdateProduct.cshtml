@@ -1,0 +1,68 @@
+﻿@model WebUI.Dtos.ProductDtos.UpdateProductDto
+
+
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+
+	}
+
+
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Ürün İşlemleri</h4>
+		<div class="row">
+			<div class="col-md-6">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Ürün Güncelleme Sayfası</div>
+						</div>
+						<input type="hidden" asp-for="ProductID" />
+						<div class="card-body">
+							<div class="form-group">
+								<label for="productname">Ürün Adını Giriniz</label>
+								<input type="text" class="form-control" asp-for="ProductName" id="productname">
+
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="price">Ürün Fiyatı Giriniz</label>
+								<input type="text" class="form-control" asp-for="Price" id="price">
+
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="ImageUrl">Ürün Görselini Giriniz</label>
+								<input type="text" class="form-control" asp-for="ImageUrl" id="ImageUrl">
+
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="category">Ürün Kategorisini Seçiniz</label>
+								@Html.DropDownListFor(x=> x.CategoryID, (List<SelectListItem>)ViewBag.v, new {@class="form-control"})
+
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="Description">Ürün Açıklamasını Giriniz</label>
+								<input type="text" class="form-control" asp-for="Description" id="Description">
+
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Ürünü Güncelle</button>
+
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>

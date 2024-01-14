@@ -26,7 +26,7 @@ namespace BusinessLayer.Concrete
 
 		public int TCategoryCount()
 		{
-			return _categoryDal.CategoryCount();
+			throw new NotImplementedException();
 		}
 
 		public void TDelete(Category entity)

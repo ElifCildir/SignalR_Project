@@ -39,10 +39,12 @@ namespace DataAccessLayer.Repositories
             return _context.Set<T>().ToList();
         }
 
-        public void Updade(T entity)
+        public void Update(T entity)
         {
            _context.Update<T>(entity);
             _context.SaveChanges();
         }
-    }
+
+	
+	}
 }

@@ -18,32 +18,32 @@ namespace BusinessLayer.Concrete
             _productDal = productDal;
         }
 
-        public void TAdd(Product entity)
+        public void TAdd(Procduct entity)
         {
             _productDal.Add(entity);
         }
 
-        public void TDelete(Product entity)
+        public void TDelete(Procduct entity)
         {
           _productDal.Delete(entity);
         }
 
-        public Product TGetByID(int id)
+        public Procduct TGetByID(int id)
         {
            return _productDal.GetByID(id);
         }
 
-        public List<Product> TGetListAll()
+        public List<Procduct> TGetListAll()
         {
             return _productDal.GetListAll();
         }
 
-        public List<Product> TGetProductsWithCategories()
-        {
-            return _productDal.GetProductsWithCategories();
-        }
+		public List<Procduct> TGetProductsWithCategories()
+		{
+			throw new NotImplementedException();
+		}
 
-        public void TUpdate(Product entity)
+		public void TUpdate(Procduct entity)
         {
            _productDal.Update(entity);
         }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DtoLayer.CategoryDto
-
+{ 
 	public class ResultCategoryDto
     {
         public int CategoryID { get; set; }

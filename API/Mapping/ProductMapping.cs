@@ -8,11 +8,11 @@ namespace API.Mapping
     {
         public ProductMapping()
         {
-            CreateMap<Product, ResultProductDto>().ReverseMap();
-            CreateMap<Product, CreateProductDto>().ReverseMap();
-            CreateMap<Product, UpdateProductDto>().ReverseMap();
-            CreateMap<Product, GetProductDto>().ReverseMap();
-            CreateMap<Product, ResultProductWithCategory>().ReverseMap();
+            CreateMap<Procduct, ResultProductDto>().ReverseMap();
+            CreateMap<Procduct, CreateProductDto>().ReverseMap();
+            CreateMap<Procduct, UpdateProductDto>().ReverseMap();
+            CreateMap<Procduct, GetProductDto>().ReverseMap();
+            CreateMap<Procduct, ResultProductWithCategory>().ReverseMap();
            
         }
     }

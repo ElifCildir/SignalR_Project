@@ -8,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SignalR.DataAccessLayer.EntityFramework
+namespace DataAccessLayer.EntityFramework
 {
-    public class EFAboutDal : GenericRepository<About>, IAboutDal
+    public class EfAboutDal : GenericRepository<About>, IAboutDal
     {
-        public EFAboutDal(SignalRContext context) : base(context) 
+        public EfAboutDal(SignalRContext context) : base(context) 
         {
         }
     }
