@@ -2,19 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-	public interface IOrderDal : IGenericDal<Order>
+	public interface ICashDeskDal: IGenericDal<CashDesk>
 	{
+		decimal TotalCashDeskAmount();
 
-		int TotalOrderCount();
-		int ActiveOrderCount();
-		decimal LastOrderPrice();
-
-		decimal TodayTotalIncome();
 	}
 }

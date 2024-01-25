@@ -5,6 +5,7 @@ using EntityLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,6 +27,11 @@ namespace DataAccessLayer.EntityFramework
 		{
 			using var context = new SignalRContext();
 			return context.Orders.OrderByDescending(x=>x.OrderID).Take(1).Select(y=>y.TotalPrice).FirstOrDefault();
+		}
+
+		public decimal TodayTotalIncome()
+		{
+			return 0;
 		}
 
 		public int TotalOrderCount()

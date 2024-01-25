@@ -62,6 +62,15 @@ builder.Services.AddScoped<IOrderDetailService, OrderDetailManager>();
 builder.Services.AddScoped<IOrderDetailDal, EfOrderDetailDal>();
 
 
+builder.Services.AddScoped<ICashDeskService, CashDeskManager>();
+builder.Services.AddScoped<ICashDeskDal, EfCashDeskDal>();
+
+
+builder.Services.AddScoped<IRestTableService, RestTableManager>();
+builder.Services.AddScoped<IRestTableDal, EfRestTableDal>();
+
+
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

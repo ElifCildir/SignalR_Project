@@ -28,5 +28,6 @@ namespace DataAccessLayer.Concrete
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
 		public DbSet<CashDesk> CashDesks { get; set; }
+		public DbSet<RestTable> RestTables { get; set; }
 	}
 }

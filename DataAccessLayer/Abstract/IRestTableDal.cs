@@ -2,19 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-	public interface IOrderDal : IGenericDal<Order>
+	public  interface IRestTableDal : IGenericDal<RestTable>
 	{
 
-		int TotalOrderCount();
-		int ActiveOrderCount();
-		decimal LastOrderPrice();
+		int RestTableCount();
 
-		decimal TodayTotalIncome();
+
 	}
 }

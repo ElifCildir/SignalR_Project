@@ -7,16 +7,10 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-	public interface IOrderService : IGenericSevice<Order>
+	public interface IRestTableService: IGenericSevice<RestTable>
 	{
 
-		int TTotalOrderCount();
-
-		int TActiveOrderCount();
-
-		decimal TLastOrderPrice();
-
-		decimal TTodayTotalIncome();
+		int TRestTableCount();
 
 	}
 }

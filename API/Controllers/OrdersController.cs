@@ -44,6 +44,13 @@ namespace API.Controllers
 		}
 
 
+		[HttpGet("TodayTotalIncome")]
+		public IActionResult TodayTotalIncome()
+		{
+			return Ok(_orderService.TTodayTotalIncome());
+		}
+
+
 	}
 
 

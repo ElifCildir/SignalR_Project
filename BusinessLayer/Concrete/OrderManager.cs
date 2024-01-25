@@ -50,6 +50,11 @@ namespace BusinessLayer.Concrete
 			return _orderDal.LastOrderPrice();
 		}
 
+		public decimal TTodayTotalIncome()
+		{
+			return _orderDal.TodayTotalIncome();
+		}
+
 		public int TTotalOrderCount()
 		{
 			return _orderDal.TotalOrderCount();
