@@ -23,7 +23,12 @@ namespace BusinessLayer.Concrete
             _productDal.Add(entity);
         }
 
-        public void TDelete(Procduct entity)
+		public decimal TAvgHamburgerPrice()
+		{
+			return _productDal.AvgHamburgerPrice();
+		}
+
+		public void TDelete(Procduct entity)
         {
           _productDal.Delete(entity);
         }

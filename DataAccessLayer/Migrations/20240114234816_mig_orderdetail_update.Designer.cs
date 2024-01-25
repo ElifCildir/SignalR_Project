@@ -4,6 +4,7 @@ using DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(SignalRContext))]
-    partial class SignalRContextModelSnapshot : ModelSnapshot
+    [Migration("20240114234816_mig_orderdetail_update")]
+    partial class mig_orderdetail_update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -76,22 +78,6 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("BookingID");
 
                     b.ToTable("Bookings");
-                });
-
-            modelBuilder.Entity("EntityLayer.Entities.CashDesk", b =>
-                {
-                    b.Property<int>("CashDeskID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CashDeskID"), 1L, 1);
-
-                    b.Property<decimal>("TotalAmount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("CashDeskID");
-
-                    b.ToTable("CashDesks");
                 });
 
             modelBuilder.Entity("EntityLayer.Entities.Category", b =>

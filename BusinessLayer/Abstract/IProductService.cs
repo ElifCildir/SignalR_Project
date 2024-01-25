@@ -23,6 +23,7 @@ namespace BusinessLayer.Abstract
 
 		string TProductNameByMinPrice();
 
+		decimal TAvgHamburgerPrice();
 
 	}
 }

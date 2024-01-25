@@ -60,6 +60,15 @@ namespace API.Controllers
 
 		}
 
+
+		[HttpGet("AvgHamburgerPrice")]
+		public IActionResult AvgHamburgerPrice()
+		{
+			return Ok(_productService.TAvgHamburgerPrice());
+
+		}
+
+
 		[HttpGet("ProductNameByMaxPrice")]
 		public IActionResult ProductNameByMaxPrice()
 		{

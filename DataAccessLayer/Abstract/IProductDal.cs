@@ -23,6 +23,8 @@ namespace DataAccessLayer.Abstract
 
 		string ProductNameByMinPrice();
 
+        decimal AvgHamburgerPrice();
+
 
 
 	}
