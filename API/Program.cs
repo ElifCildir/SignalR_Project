@@ -69,6 +69,8 @@ builder.Services.AddScoped<ICashDeskDal, EfCashDeskDal>();
 builder.Services.AddScoped<IRestTableService, RestTableManager>();
 builder.Services.AddScoped<IRestTableDal, EfRestTableDal>();
 
+builder.Services.AddScoped<ISliderService, SliderManager>();
+builder.Services.AddScoped<ISliderDal, EfSliderDal>();
 
 
 builder.Services.AddControllers();

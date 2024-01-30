@@ -29,5 +29,9 @@ namespace DataAccessLayer.Concrete
 
 		public DbSet<CashDesk> CashDesks { get; set; }
 		public DbSet<RestTable> RestTables { get; set; }
-	}
+
+        public DbSet<Slider> Sliders { get; set; }
+    }
+
 }
+
